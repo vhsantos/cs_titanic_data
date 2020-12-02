@@ -1,10 +1,10 @@
+-- Create and connect to DB
+CREATE DATABASE titanicdb; 
+\c titanicdb 
+
 -- Add a extension to create uuid
 -- https://www.postgresql.org/docs/current/uuid-ossp.html
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
-
-
-CREATE DATABASE titanicdb; 
-\c titanicdb 
 
 -- BUG changed age from integer to numeric because a bug in titanic.csv at line 58.
 -- Create a table people with a uuid primary key generate automaticly
