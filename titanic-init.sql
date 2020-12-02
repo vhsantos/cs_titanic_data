@@ -3,6 +3,9 @@
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
 
+CREATE DATABASE titanicdb; 
+\c titanicdb 
+
 -- BUG changed age from integer to numeric because a bug in titanic.csv at line 58.
 -- Create a table people with a uuid primary key generate automaticly
 CREATE TABLE IF NOT EXISTS people (
