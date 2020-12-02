@@ -1,5 +1,5 @@
 -- Create and connect to DB
-CREATE DATABASE titanicdb; 
+-- CREATE DATABASE titanicdb; 
 \c titanicdb 
 
 -- Add a extension to create uuid
@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS people (
 );
 
 -- Copy data from CSV file cloned from repository in InitContainer
-COPY people (survived,passengerclass,name,sex,age,siblingsorspousesaboard,parentsorchildrenaboard,fare) FROM '/docker-entrypoint-initdb.d/cs_titanic_data/titanic.csv' DELIMITER ',' CSV HEADER;
+COPY people (survived,passengerclass,name,sex,age,siblingsorspousesaboard,parentsorchildrenaboard,fare) FROM '/docker-entrypoint-initdb.d/titanic.csv' DELIMITER ',' CSV HEADER;
 
 
 -- Data sample:
