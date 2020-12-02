@@ -39,7 +39,7 @@ grant api_rw to authenticator;
 
 
 -- Copy data from CSV file cloned from repository in InitContainer
-COPY people (survived,passengerClass,name,sex,age,siblingsOrSpousesAboard,parentsOrChildrenAboard,fare) FROM '/docker-entrypoint-initdb.d/titanic.csv' DELIMITER ',' CSV HEADER;
+COPY people ("survived","passengerClass","name","sex","age","siblingsOrSpousesAboard","parentsOrChildrenAboard","fare") FROM '/docker-entrypoint-initdb.d/titanic.csv' DELIMITER ',' CSV HEADER;
 
 -- Data sample:
 -- Survived,Pclass,Name,Sex,Age,Siblings/Spouses Aboard,Parents/Children Aboard,Fare
